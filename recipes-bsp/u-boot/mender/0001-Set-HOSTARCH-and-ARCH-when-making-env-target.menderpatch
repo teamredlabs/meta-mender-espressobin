@@ -1,0 +1,24 @@
+From 14e83fea8a65fd476c53bce57c931019983cc4ca Mon Sep 17 00:00:00 2001
+From: "John Lawrence M. Penafiel" <penafieljlm@gmail.com>
+Date: Wed, 11 Jul 2018 23:56:57 +0800
+Subject: [PATCH] Set HOSTARCH and ARCH when making env target
+
+---
+ meta-mender-core/recipes-bsp/u-boot/files/uboot_auto_configure.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/uboot_auto_configure.sh b/uboot_auto_configure.sh
+index fe65a32..102b286 100755
+--- a/uboot_auto_configure.sh
++++ b/uboot_auto_configure.sh
+@@ -98,7 +98,7 @@ fi
+ 
+ # Prepare env tools for host platform.
+ bash $SUB_X "$SCRIPT_DIR/uboot_auto_patch.sh" --patch-config-file
+-$MAKE HOSTCC="$BUILDCC -DMENDER_AUTO_PROBING" CC="$BUILDCC -DMENDER_AUTO_PROBING" $ENV_TARGET
++$MAKE HOSTCC="$BUILDCC -DMENDER_AUTO_PROBING" CC="$BUILDCC -DMENDER_AUTO_PROBING" ARCH="${ARCH}" $ENV_TARGET
+ 
+ # Prepare a fake environment to make work fw_printenv properly. Doesn't have
+ # to be valid, just existing.
+-- 
+

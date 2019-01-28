@@ -1,0 +1,25 @@
+From dd328b12868f7813138d45e04bd52cc5e903f72d Mon Sep 17 00:00:00 2001
+From: "John Lawrence M. Penafiel" <penafieljlm@gmail.com>
+Date: Wed, 30 Jan 2019 00:14:01 +0800
+Subject: [PATCH] Include menuconfig options when checking for Kconfig options
+
+---
+ meta-mender-core/recipes-bsp/u-boot/files/uboot_auto_patch.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/meta-mender-core/recipes-bsp/u-boot/files/uboot_auto_patch.sh b/meta-mender-core/recipes-bsp/u-boot/files/uboot_auto_patch.sh
+index 7409e47..05f6917 100755
+--- a/meta-mender-core/recipes-bsp/u-boot/files/uboot_auto_patch.sh
++++ b/meta-mender-core/recipes-bsp/u-boot/files/uboot_auto_patch.sh
+@@ -138,7 +138,7 @@ is_kconfig_option() {
+ 
+     # Check Kconfig files.
+     option=${1#CONFIG_}
+-    if find -name Kconfig | xargs grep -q "^config *$option\\b"; then
++    if find -name Kconfig | xargs grep -qE "^(menu)?config *$option\\b"; then
+         return 0
+     fi
+ 
+-- 
+2.14.2
+
