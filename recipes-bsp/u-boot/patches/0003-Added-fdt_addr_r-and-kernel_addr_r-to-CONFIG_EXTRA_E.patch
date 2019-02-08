@@ -1,0 +1,27 @@
+From bdd070d6bdcca6d1d11013d4de9a0c9f825bfa9a Mon Sep 17 00:00:00 2001
+From: "John Lawrence M. Penafiel" <penafieljlm@gmail.com>
+Date: Sat, 9 Feb 2019 09:18:35 +0800
+Subject: [PATCH] Added fdt_addr_r and kernel_addr_r to
+ CONFIG_EXTRA_ENV_SETTINGS
+
+---
+ include/configs/mvebu_armada-common.h | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/include/configs/mvebu_armada-common.h b/include/configs/mvebu_armada-common.h
+index 5ecb68a..fcf5d38 100644
+--- a/include/configs/mvebu_armada-common.h
++++ b/include/configs/mvebu_armada-common.h
+@@ -26,6 +26,9 @@
+ #define CONFIG_SYS_BAUDRATE_TABLE	{ 9600, 19200, 38400, 57600, \
+ 					  115200, 230400, 460800, 921600 }
+ 
++#define CONFIG_EXTRA_ENV_SETTINGS	"fdt_addr_r=0x4f00000\0"		\
++					  				"kernel_addr_r=0x5000000"
++
+ /*
+  * For booting Linux, the board info and command line data
+  * have to be in the first 8 MB of memory, since this is
+-- 
+2.9.0
+
