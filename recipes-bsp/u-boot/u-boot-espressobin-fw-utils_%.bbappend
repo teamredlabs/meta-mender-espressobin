@@ -1,3 +1,5 @@
+inherit mender-uboot
+
 require recipes-bsp/u-boot/u-boot-mender-helpers.inc
 require u-boot-espressobin.inc
 
