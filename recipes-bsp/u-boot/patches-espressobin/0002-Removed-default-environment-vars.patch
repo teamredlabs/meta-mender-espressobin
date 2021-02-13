@@ -1,7 +1,7 @@
-From 2b43fc325e3e709af92ea0e0e8ecfac17295d9ae Mon Sep 17 00:00:00 2001
+From 51c17b10fe1930379e225025cf4eb16c9f907a0e Mon Sep 17 00:00:00 2001
 From: "John Lawrence M. Penafiel" <penafieljlm@gmail.com>
-Date: Sat, 9 Feb 2019 04:36:38 +0800
-Subject: [PATCH] Removed default environment vars
+Date: Sat, 13 Feb 2021 09:29:19 +0800
+Subject: [PATCH 2/3] Removed default environment vars
 
 ---
  include/configs/mvebu_armada-common.h | 46 -----------------------------------

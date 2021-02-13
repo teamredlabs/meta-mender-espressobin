@@ -1,7 +1,7 @@
-From bdd070d6bdcca6d1d11013d4de9a0c9f825bfa9a Mon Sep 17 00:00:00 2001
+From 412f1de59126aed140bb220650499e498e1d9981 Mon Sep 17 00:00:00 2001
 From: "John Lawrence M. Penafiel" <penafieljlm@gmail.com>
-Date: Sat, 9 Feb 2019 09:18:35 +0800
-Subject: [PATCH] Added fdt_addr_r and kernel_addr_r to
+Date: Sat, 13 Feb 2021 09:30:29 +0800
+Subject: [PATCH 3/3] Added fdt_addr_r and kernel_addr_r to
  CONFIG_EXTRA_ENV_SETTINGS
 
 ---
