@@ -5,8 +5,6 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/patches:"
 
 # Additions
 
-B = "${WORKDIR}/build"
-
 FILESEXTRAPATHS_prepend := "${THISDIR}/patches-espressobin:"
 SRC_URI_append = " \
     file://0001-Added-rootwait-to-CONFIG_MENDER_BOOTCOMMAND.patch \
